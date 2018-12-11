@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="Login.css">
+    </head>
+
+    <body>
+        <form class="form-horizontal" id="login" action="../MainPage/Account.html">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10"> 
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+            </div>
+            <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" onclick="SignIn()">Sign In</button>
+                <button type="button" class="btn btn-default" onclick="Create()">Create Account</button>
+                <button type="button" class="btn btn-default" onclick="NoAccount()">Connect Without Account</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+
+            function SignIn() {
+                var mail = document.getElementById("email").value;
+                var password = document.getElementById("pwd").value;
+                
+                if (mail === "test@test.eu" && password === "test") {
+                    document.getElementById("login").submit();
+                }
+            }
+
+            function Create() {
+                var currentUrl = window.location.href;
+                var newUrl = currentUrl.replace("/index.html", "/CreateAccount/CreateAccount.html");
+                document.location.href = newUrl;
+            }
+
+            function NoAccount() {
+                var currentUrl = window.location.href;
+                var newUrl = currentUrl.replace("/index.html", "/MainPage/noAccount.html");
+                document.location.href = newUrl;
+            }
+        
+        </script>
+    </body>
+</html>
