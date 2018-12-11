@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="Profile.css">
+    </head>
+
+    <body>
+        <form class="form-horizontal" id="create" action="../MainPage/Account.html">
+            <h1 style="text-align:center">Welcome to your profile page</h1>
+            <ul class="list-group" style="text-align:center">
+                <li class="list-group-item">Username: Test</li>
+                <li class="list-group-item">Email: test@test.eu</li>
+                <li class="list-group-item">First Language: English Native</li>
+                <li class="list-group-item">Second Language: French Beginner</li>
+            </ul>
+            <div class="form-group"> 
+                <div class="col text-center align-self-center">
+                    <button type="submit" class="btn btn-default">Return</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+
+            function Create() {
+                var confirm = document.getElementById("confirm").value;
+                var password = document.getElementById("pwd").value;
+                
+                if (confirm === password ) {
+                    document.getElementById("create").submit();
+                }
+            }
+        
+        </script>
+    </body>
+</html>

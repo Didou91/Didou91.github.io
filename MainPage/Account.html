@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <form class="form-horizontal" id="login" action="../Chat/Chat.html">
+        <form class="form-horizontal" id="login" action="../Chat/ChatAccount.html">
             <h3 style="text-align: center">Welcome, please choose the language you want to speak and the level of the person you are going to talk to.</h3>
             <div class="form-group">
                 <select class="form-control" id="language">
@@ -30,8 +30,9 @@
             </div>
             <div class="form-group"> 
                 <div class="col text-center align-self-center">
-                <button type="button" class="btn btn-default" onclick="Return()">Return</button>
+                <button type="button" class="btn btn-default" onclick="Account()">View Profile</button>
                 <button type="submit" class="btn btn-default">Let's Chat !</button>
+                <button type="button" class="btn btn-default" onclick="Return()">Return</button>
                 </div>
             </div>
         </form>
@@ -41,6 +42,12 @@
             function Return() {
                 var currentUrl = window.location.href;
                 var newUrl = currentUrl.replace("/MainPage/Account.html", "/index.html");
+                document.location.href = newUrl;
+            }
+
+            function Account() {
+                var currentUrl = window.location.href;
+                var newUrl = currentUrl.replace("/MainPage/Account.html", "/Profile/Profile.html");
                 document.location.href = newUrl;
             }
 
