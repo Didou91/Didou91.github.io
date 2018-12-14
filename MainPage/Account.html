@@ -5,38 +5,43 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="mainPage.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body>
-        <form class="form-horizontal" id="login" action="../Chat/ChatAccount.html">
-            <h3 style="text-align: center">Welcome, please choose the language you want to speak and the level of the person you are going to talk to.</h3>
-            <div class="form-group">
-                <select class="form-control" id="language">
-                    <option>English</option>
-                    <option>French</option>
-                    <option>Spanish</option>
-                    <option>German</option>
-                    <option>Portuguese</option>
-                </select>
+        <div class="container">
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+                <form class="form-horizontal" id="login" action="../Chat/ChatAccount.html">
+                    <h3 style="color: #076969; text-align:center; margin-bottom: 50px;">Welcome, please choose the language you want to
+                        speak and the level of the person you are going to talk to.</h3>
+                    <div class="form-group">
+                        <select class="form-control" id="language">
+                            <option>English</option>
+                            <option>French</option>
+                            <option>Spanish</option>
+                            <option>German</option>
+                            <option>Portuguese</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="firstLevel">
+                            <option>I do not care</option>
+                            <option>Native</option>
+                            <option>Advanced</option>
+                            <option>Intermediate</option>
+                            <option>Beginner</option>
+                        </select>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="centered">
+                            <button type="submit" class="btn action_button action_button--blue">Let's Chat !</button>
+                            <button type="button" class="btn action_button action_button--blue_border" onclick="Account()">View Profile</button>
+                            <button type="button" class="btn action_button action_button--blue_border" onclick="Return()">Go back !</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <select class="form-control" id="firstLevel">
-                    <option>I do not care</option>
-                    <option>Native</option>
-                    <option>Advanced</option>
-                    <option>Intermediate</option>
-                    <option>Beginner</option>
-                </select>
-            </div>
-            <div class="form-group"> 
-                <div class="col text-center align-self-center">
-                <button type="button" class="btn btn-default" onclick="Account()">View Profile</button>
-                <button type="submit" class="btn btn-default">Let's Chat !</button>
-                <button type="button" class="btn btn-default" onclick="Return()">Return</button>
-                </div>
-            </div>
-        </form>
-
+        </div>
         <script>
 
             function Return() {

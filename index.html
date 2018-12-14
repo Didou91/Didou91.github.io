@@ -5,32 +5,43 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body>
-        <form class="form-horizontal" id="login" action="MainPage/Account.html">
-            <h1 style="text-align:center">Welcome to the login page</h1>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Email:</label>
-                <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
+<div class="container">
+    <div class="col-md-8 col-md-offset-2 col-sm-12">
+        <form class="form-horizontal" class="" id="login" action="MainPage/Account.html">
+            <h1 style="color: #076969; text-align:center; margin-bottom: 50px;">Welcome to our chat app,
+                the newest way to practice langages and meet new people !</h1>
+            <h3 style="text-align:center; margin-bottom: 30px;">Sign in to your account:</h3>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control rounded-input" id="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-10"> 
+                            <input type="password" class="form-control rounded-input" id="pwd" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <div class="col-md-10 col-md-offset-1 col-sm-12">
+                            <div class="centered">
+                            <button type="button" class="btn action_button--blue action_button" onclick="SignIn()">Sign In</button>
+                            <button type="button" style="margin-top: 15px;" class="btn action_button--blue action_button" onclick="Create()">Create Account</button>
+</div>
+                            <p class="unauthentified_text">Or you can keep going without an account, but you'll have restricted access to our content !</p class="unauthentified_text">
+                            <div class="centered">
+                                <button type="button" class="btn action_button action_button--blue_border" onclick="NoAccount()">Connect Without Account</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="pwd">Password:</label>
-                <div class="col-sm-10"> 
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                </div>
-            </div>
-            <div class="form-group"> 
-                <div class="col-sm-offset-2 col-sm-10">
-                <button type="button" class="btn btn-default" onclick="SignIn()">Sign In</button>
-                <button type="button" class="btn btn-default" onclick="Create()">Create Account</button>
-                <button type="button" class="btn btn-default" onclick="NoAccount()">Connect Without Account</button>
-                </div>
-            </div>
-        </form>
-
+            </form>
+        </div>
         <script>
 
             function SignIn() {

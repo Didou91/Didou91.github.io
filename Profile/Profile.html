@@ -5,34 +5,37 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="Profile.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body>
-        <form class="form-horizontal" id="create" action="../MainPage/Account.html">
-            <h1 style="text-align:center">Welcome to your profile page</h1>
-            <ul class="list-group" style="text-align:center">
-                <li class="list-group-item">Username: Test</li>
-                <li class="list-group-item">Email: test@test.eu</li>
-                <li class="list-group-item">First Language: English Native</li>
-                <li class="list-group-item">Second Language: French Beginner</li>
-            </ul>
-            <div class="form-group"> 
-                <div class="col text-center align-self-center">
-                    <button type="submit" class="btn btn-default">Return</button>
-                </div>
+        <div class="container">
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+                <form class="form-horizontal" id="create" action="../MainPage/Account.html">
+                    <h1 style="color: #076969; text-align:center; padding-bottom: 50px;">Welcome to your profile</h1>
+                    <ul class="list-group" style="text-align:center">
+                        <li class="list-group-item">Username: Test</li>
+                        <li class="list-group-item">Email: test@test.eu</li>
+                        <li class="list-group-item">First Language: English Native</li>
+                        <li class="list-group-item">Second Language: French Beginner</li>
+                    </ul>
+                    <div class="form-group"> 
+                        <div class="centered">
+                            <button type="button" onclick="Return()" class="btn action_button action_button--blue_border">Return</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
 
         <script>
 
-            function Create() {
-                var confirm = document.getElementById("confirm").value;
-                var password = document.getElementById("pwd").value;
-                
-                if (confirm === password ) {
-                    document.getElementById("create").submit();
-                }
+            function Return() {
+                var currentUrl = window.location.href;
+                var newUrl = currentUrl.replace("/Profile/Profile.html", "/MainPage/Account.html");
+                document.location.href = newUrl;
             }
+
         
         </script>
     </body>

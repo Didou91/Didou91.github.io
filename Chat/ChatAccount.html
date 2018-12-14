@@ -5,46 +5,52 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="Chat.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body>
-        <div class="center">
-            <h1 style="text-align:center">Welcome to the chat page</h1>
-            <div class="container">
-                <div id="messages">
-                    <div class="msg-left">
-                        Hello
-                    </div>
-                    <div class="msg-right">
-                        Hello
-                    </div>
-                    <div class="msg-left">
-                        How are you?
-                    </div>
-                    <div class="msg-right">
-                    I am fine and you?
-                    </div>
-                    <div class="msg-left">
-                        fine
-                    </div>
-                    <div class="msg-right">
-                        Why are did you come on this website?
-                    </div>
-                    <div class="msg-left">
-                    I just wanted to practice my english and you?
+        <div class="container">
+            <div class="centered col-md-12 col-sm-12">
+                <h1 style="color: #076969; text-align:center; margin-bottom: 50px; padding-top: 30px;">Welcome to the chat page</h1>
+                <div class="container">
+                    <div id="messages">
+                        <div class="msg-left">
+                            Hello
+                        </div>
+                        <div class="msg-right">
+                            Hello
+                        </div>
+                        <div class="msg-left">
+                            How are you?
+                        </div>
+                        <div class="msg-right">
+                        I am fine and you?
+                        </div>
+                        <div class="msg-left">
+                            fine
+                        </div>
+                        <div class="msg-right">
+                            Why are did you come on this website?
+                        </div>
+                        <div class="msg-left">
+                        I just wanted to practice my english and you?
+                        </div>
+                        <div class="msg-right">
+                            Obviously same reason you did ! :D
+                        </div>
+
                     </div>
                 </div>
+                <form class="form-inline">
+                    <div class="form-group" style="display: flex; justify-content: center; margin-bottom: 30px;">
+                        <input type="text" class="rounded-input form-control" id="chat">
+                        <button style="margin-left: 15px;" type="submit" class="btn action_button action_button--blue">Send</button>
+                    </div>
+                    <button style="margin-right: 15px;" type="submit" class="btn action_button action_button--blue">Skip</button>
+                    <button type="submit" class="btn action_button action_button--blue_border" onclick="Return()">Return</button>
+                </form>
             </div>
-            <form class="form-inline">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="chat">
-                </div>
-                <button type="submit" class="btn btn-default">Send</button>
-                <button type="submit" class="btn btn-default">Skip</button>
-                <button type="submit" class="btn btn-default" onclick="Return()">Return</button>
-            </form>
         </div>
-        
         
         <script>
             function Return() {

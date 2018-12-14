@@ -5,80 +5,84 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="CreateAccount.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
 
     <body>
-        <form class="form-horizontal" id="create" action="../index.html">
-            <h1 style="text-align:center">Welcome to the create account page</h1>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="text">Username:</label>
-                <div class="col-sm-10">
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+            <form class="form-horizontal" id="create" action="../MainPage/Account.html">
+                <h1 style="color: #076969; text-align:center; margin-bottom: 50px;">Welcome to the create account page</h1>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Username:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="email">Email:</label>
-                <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="pwd">Password:</label>
-                <div class="col-sm-10"> 
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                    <div class="col-sm-10"> 
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
-                <div class="col-sm-10"> 
-                <input type="password" class="form-control" id="confirm" placeholder="Enter password">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
+                    <div class="col-sm-10"> 
+                    <input type="password" class="form-control" id="confirm" placeholder="Enter password">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label>Choose your fisrt language:</label>
-                <select class="form-control" id="firstLanguage">
-                  <option>English</option>
-                  <option>Spanish</option>
-                  <option>German</option>
-                  <option>French</option>
-                  <option>Portuguese</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Choose the level of your fisrt language:</label>
-                <select class="form-control" id="firstLevel">
-                  <option>Native</option>
-                  <option>Advanced</option>
-                  <option>Intermediate</option>
-                  <option>Beginner</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Choose your second language:</label>
-                <select class="form-control" id="secondLanguage">
-                  <option>English</option>
-                  <option>Spanish</option>
-                  <option>German</option>
-                  <option>French</option>
-                  <option>Portuguese</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Choose the level of your second language:</label>
-                <select class="form-control" id="secondLevel">
-                  <option>Native</option>
-                  <option>Advanced</option>
-                  <option>Intermediate</option>
-                  <option>Beginner</option>
-                </select>
-            </div>
-            <div class="form-group"> 
-                <div class="col text-center align-self-center">
-                <button type="button" class="btn btn-default" onclick="Create()">Return</button>
-                <button type="button" class="btn btn-default" onclick="Create()">Create Account</button>
+                <div class="form-group">
+                    <label>Choose your first language:</label>
+                    <select class="form-control" id="firstLanguage">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>German</option>
+                    <option>French</option>
+                    <option>Portuguese</option>
+                    </select>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label>Choose the level of your first language:</label>
+                    <select class="form-control" id="firstLevel">
+                    <option>Native</option>
+                    <option>Advanced</option>
+                    <option>Intermediate</option>
+                    <option>Beginner</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Choose your second language:</label>
+                    <select class="form-control" id="secondLanguage">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>German</option>
+                    <option>French</option>
+                    <option>Portuguese</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Choose the level of your second language:</label>
+                    <select class="form-control" id="secondLevel">
+                    <option>Native</option>
+                    <option>Advanced</option>
+                    <option>Intermediate</option>
+                    <option>Beginner</option>
+                    </select>
+                </div>
+                <div class="form-group"> 
+                    <div class="centered">
+                        <button style="margin: 15px 0;" type="button" class="btn action_button action_button--blue" onclick="Create()">Create
+                            Account</button>
+                        <button type="button" class="btn action_button action_button--blue_border" onclick="Create()">Return</button>
+                    </div>
+                </div>
+            </form>
 
         <script>
 
@@ -88,6 +92,8 @@
                 
                 if (confirm === password ) {
                     document.getElementById("create").submit();
+                } else {
+                    alert('Your passwords don\'t match')
                 }
             }
         
